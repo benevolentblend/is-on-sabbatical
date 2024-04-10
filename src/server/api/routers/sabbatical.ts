@@ -9,8 +9,8 @@ type Sabbatical = {
 };
 
 const sabbaticals: Sabbatical[] = [
-  { person: "Andrew", start: new Date(2024, 5, 4), end: new Date(2024, 6, 4) },
-  { person: "Dan", start: new Date(2024, 5, 4), end: new Date(2024, 6, 4) },
+  { person: "Andrew", start: new Date(2024, 4, 4), end: new Date(2024, 5, 4) },
+  { person: "Dan", start: new Date(2024, 4, 4), end: new Date(2024, 5, 4) },
 ];
 
 const sabbaticalIndex = new Map(
