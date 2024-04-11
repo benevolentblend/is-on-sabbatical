@@ -1,22 +1,26 @@
 "use client";
 
 import useCountDown from "~/hooks/use-count-down";
+import Segment from "~/components/segment";
 
 interface CountDownProps {
   targetDate: string | Date;
+  size?: "small" | "large";
 }
 
-const CountDown: React.FC<CountDownProps> = ({ targetDate }) => {
+const CountDown: React.FC<CountDownProps> = ({
+  targetDate,
+  size = "small",
+}) => {
   const [days, hours, minutes, seconds] = useCountDown(targetDate);
 
-  if (days + hours + minutes + seconds < 0) {
-    return "now!";
-  }
-
   return (
-    <>
-      {days} Days, {hours} hours, {minutes} Minutes, {seconds} Seconds
-    </>
+    <div className="flex flex-row justify-center">
+      <Segment unit="Days" value={days} size={size} />
+      <Segment unit="Hours" value={hours} size={size} />
+      <Segment unit="Minutes" value={minutes} size={size} />
+      <Segment unit="Seconds" value={seconds} size={size} />
+    </div>
   );
 };
 

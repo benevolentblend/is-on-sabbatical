@@ -17,8 +17,8 @@ const TripItem: React.FC<TripItemProps> = ({ trip }) => {
   const countdownDate = status === "before" ? trip.start : trip.end;
 
   return (
-    <div className="flex justify-between p-4 text-2xl">
-      <div>
+    <div className="grid grid-cols-1 items-center gap-x-16 p-4 text-center text-2xl xl:grid-cols-3">
+      <div className="pb-4 xl:text-start">
         <Link
           href={`/${trip.person.toLowerCase()}`}
           className="text-2xl text-blue-600 underline hover:text-blue-800"
@@ -26,8 +26,10 @@ const TripItem: React.FC<TripItemProps> = ({ trip }) => {
           Is {trip.person} on {trip.type}?
         </Link>
       </div>
-      <div>
+      <div className="pb-4  xl:text-end">
         {answer}, {description}
+      </div>
+      <div>
         {status !== "after" && <CountDown targetDate={countdownDate} />}
       </div>
     </div>

@@ -6,7 +6,7 @@ export default async function Home() {
   const trips = await api.trip.getTrips();
 
   return (
-    <main className="container mx-auto max-w-screen-xl p-4">
+    <main className="container mx-auto p-4">
       <div className="flex flex-col">
         {trips.map((trip) => (
           <TripItem key={trip.person} trip={trip} />

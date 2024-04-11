@@ -28,7 +28,12 @@ const caculateSegments = (
   const minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((countDown % (1000 * 60)) / 1000);
 
-  return [days, hours, minutes, seconds];
+  return [
+    Math.max(days, 0),
+    Math.max(hours, 0),
+    Math.max(minutes, 0),
+    Math.max(seconds, 0),
+  ];
 };
 
 export default useCountDown;
