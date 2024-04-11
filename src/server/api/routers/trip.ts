@@ -1,38 +1,32 @@
 import { z } from "zod";
 
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
-
-type Trip = {
-  type: "sabbatical" | "vacation";
-  person: string;
-  start: Date;
-  end: Date;
-};
+import { type Trip } from "~/types";
 
 const trips: Trip[] = [
   {
     person: "Andrew",
     type: "sabbatical",
-    start: new Date(2024, 4, 4),
-    end: new Date(2024, 5, 4),
+    start: "2024-5-4",
+    end: "2024-6-4",
   },
   {
     person: "Dan",
     type: "sabbatical",
-    start: new Date(2024, 4, 4),
-    end: new Date(2024, 5, 4),
+    start: "2024-5-4",
+    end: "2024-6-4",
   },
   {
     person: "Ben",
     type: "vacation",
-    start: new Date(2024, 4, 18),
-    end: new Date(2024, 5, 4),
+    start: "2024-5-18",
+    end: "2024-6-4",
   },
   {
     person: "Liam",
     type: "vacation",
-    start: new Date(2024, 4, 18),
-    end: new Date(2024, 5, 4),
+    start: "2024-5-18",
+    end: "2024-6-4",
   },
 ];
 

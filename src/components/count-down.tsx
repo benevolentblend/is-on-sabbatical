@@ -15,7 +15,7 @@ const CountDown: React.FC<CountDownProps> = ({ targetDate }) => {
 
   return (
     <>
-      in {days} Days, {hours} hours, {minutes} Minutes, {seconds} Seconds
+      {days} Days, {hours} hours, {minutes} Minutes, {seconds} Seconds
     </>
   );
 };

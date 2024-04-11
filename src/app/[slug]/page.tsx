@@ -1,6 +1,6 @@
 import { type Metadata } from "next";
 import { redirect } from "next/navigation";
-import CountDown from "~/components/count-down";
+import TripHero from "~/components/trip-hero";
 import { api } from "~/trpc/server";
 
 type Props = {
@@ -30,14 +30,9 @@ export default async function Page({ params }: Props) {
     redirect("/");
   }
 
-  const serializedDate = trip.start.toDateString();
-
   return (
     <main className="container mx-auto max-w-screen-xl p-4">
-      <div className="text-3xl">
-        {trip.person}&apos;s {trip.type} is{" "}
-        <CountDown targetDate={serializedDate} />
-      </div>
+      <TripHero trip={trip} />
     </main>
   );
 }
