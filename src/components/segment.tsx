@@ -20,13 +20,15 @@ const Segment: React.FC<SegmentProps> = ({
       <div className="rounded bg-white p-2 text-black">
         <div
           className={cn(
-            size === "small" ? "text-2xl" : "text-8xl",
+            size === "small" ? "text-2xl" : "text-3xl lg:text-8xl",
             flash ? "text-red-600" : "text-black",
           )}
         >
           {value}
         </div>
-        <div className={cn(size === "small" ? "text-lg" : "text-3xl")}>
+        <div
+          className={cn(size === "small" ? "text-lg" : "text-lg lg:text-3xl")}
+        >
           {unit}
         </div>
       </div>

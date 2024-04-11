@@ -26,7 +26,7 @@ const TripItem: React.FC<TripItemProps> = ({ trip }) => {
           Is {trip.person} on {trip.type}?
         </Link>
       </div>
-      <div className="pb-4  xl:text-end">
+      <div className="pb-4 xl:text-end">
         {answer}, {description}
       </div>
       <div>
