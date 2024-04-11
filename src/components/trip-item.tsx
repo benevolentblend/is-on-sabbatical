@@ -30,7 +30,7 @@ const TripItem: React.FC<TripItemProps> = ({ trip }) => {
         {answer}, {description}
       </div>
       <div>
-        {status !== "after" && <CountDown targetDate={countdownDate} />}
+        <CountDown targetDate={countdownDate} />
       </div>
     </div>
   );
