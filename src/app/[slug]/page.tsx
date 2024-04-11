@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const name = sabbatical?.person ?? "";
 
   return {
-    title: `Is ${name} on Sabbatical?`,
+    title: `Is ${name} on sabbatical?`,
   };
 }
 

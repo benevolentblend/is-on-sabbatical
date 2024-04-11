@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Is On Sabbatical?",
+  title: "Is on sabbatical?",
   description: "How to easily tell if these people are on sabbatical",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
