@@ -14,6 +14,8 @@ const TripItem: React.FC<TripItemProps> = ({ trip }) => {
   const status = useTripStatus(trip.start, trip.end);
   const [answer, description] = formatStatusMessage(status, trip);
 
+  const countdownDate = status === "before" ? trip.start : trip.end;
+
   return (
     <div className="flex justify-between p-4 text-2xl">
       <div>
@@ -26,7 +28,7 @@ const TripItem: React.FC<TripItemProps> = ({ trip }) => {
       </div>
       <div>
         {answer}, {description}
-        {status !== "after" && <CountDown targetDate={trip.start} />}
+        {status !== "after" && <CountDown targetDate={countdownDate} />}
       </div>
     </div>
   );
