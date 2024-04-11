@@ -7,8 +7,8 @@ const trips: Trip[] = [
   {
     person: "Andrew",
     type: "sabbatical",
-    start: "2024-3-4",
-    end: "2024-4-11",
+    start: "2024-5-4",
+    end: "2024-6-4",
   },
   {
     person: "Dan",
@@ -25,8 +25,8 @@ const trips: Trip[] = [
   {
     person: "Liam",
     type: "vacation",
-    start: "2024-3-18",
-    end: "2024-4-10",
+    start: "2024-5-18",
+    end: "2024-6-4",
   },
 ];
 
