@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const person = params.slug;
 
   const sabbatical = person
-    ? await api.sabbatical.getSabbatical({ name: person })
+    ? await api.trip.getTrip({ name: person })
     : undefined;
 
   const name = sabbatical?.person ?? "";
@@ -24,20 +24,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Page({ params }: Props) {
   const person = params.slug;
 
-  const sabbatical = person
-    ? await api.sabbatical.getSabbatical({ name: person })
-    : undefined;
+  const trip = person ? await api.trip.getTrip({ name: person }) : undefined;
 
-  if (!sabbatical) {
+  if (!trip) {
     redirect("/");
   }
 
-  const serializedDate = sabbatical.start.toDateString();
+  const serializedDate = trip.start.toDateString();
 
   return (
     <main className="container mx-auto max-w-screen-xl p-4">
       <div className="text-3xl">
-        {sabbatical.person}&apos;s Sabbatical is{" "}
+        {trip.person}&apos;s {trip.type} is{" "}
         <CountDown targetDate={serializedDate} />
       </div>
     </main>

@@ -1,4 +1,4 @@
-import { sabbaticalRouter } from "~/server/api/routers/sabbatical";
+import { tripRouter } from "~/server/api/routers/trip";
 import { createCallerFactory, createTRPCRouter } from "~/server/api/trpc";
 
 /**
@@ -7,7 +7,7 @@ import { createCallerFactory, createTRPCRouter } from "~/server/api/trpc";
  * All routers added in /api/routers should be manually added here.
  */
 export const appRouter = createTRPCRouter({
-  sabbatical: sabbaticalRouter,
+  trip: tripRouter,
 });
 
 // export type definition of API
