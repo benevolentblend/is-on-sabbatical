@@ -23,6 +23,7 @@ const Segment: React.FC<SegmentProps> = ({
             size === "small" ? "text-2xl" : "text-3xl lg:text-8xl",
             flash ? "text-red-600" : "text-black",
           )}
+          suppressHydrationWarning
         >
           {value}
         </div>
