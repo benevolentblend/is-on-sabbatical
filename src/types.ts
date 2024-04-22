@@ -4,3 +4,5 @@ export type Trip = {
   start: string;
   end: string;
 };
+
+export type TripStatus = "before" | "active" | "after";

@@ -4,6 +4,7 @@ import useTripStatus from "~/hooks/use-trip-status";
 import { type Trip } from "~/types";
 import CountDown from "~/components/count-down";
 import formatStatusMessage from "~/components/format-trip-status";
+import Gif from "~/components/gif";
 
 interface TripItemProps {
   trip: Trip;
@@ -23,6 +24,9 @@ const TripHero: React.FC<TripItemProps> = ({ trip }) => {
       <div className="p-4">{description}</div>
       <div>
         <CountDown targetDate={countdownDate} size="large" />
+      </div>
+      <div className="flex justify-center p-2">
+        <Gif status={status} />
       </div>
     </div>
   );

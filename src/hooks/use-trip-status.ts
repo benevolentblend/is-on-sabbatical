@@ -2,8 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { isBefore } from "date-fns";
+import { type TripStatus } from "~/types";
 
-const useTripStatus = (start: string | Date, end: string | Date) => {
+const useTripStatus = (
+  start: string | Date,
+  end: string | Date,
+): TripStatus => {
   const startDate = new Date(start);
   const endDate = new Date(end);
 
@@ -11,7 +15,7 @@ const useTripStatus = (start: string | Date, end: string | Date) => {
   const isBeforeTrip = isBefore(currentDate, startDate);
   const isOnTrip = isBefore(currentDate, endDate);
 
-  const [status, setStatus] = useState<"before" | "active" | "after">(
+  const [status, setStatus] = useState<TripStatus>(
     isBeforeTrip ? "before" : isOnTrip ? "active" : "after",
   );
 

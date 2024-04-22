@@ -1,7 +1,7 @@
-import { type Trip } from "~/types";
+import { type TripStatus, type Trip } from "~/types";
 
 const formatStatusMessage = (
-  status: "before" | "active" | "after",
+  status: TripStatus,
   trip: Trip,
 ): [string, string] => {
   switch (status) {

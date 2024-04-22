@@ -7,26 +7,26 @@ const trips: Trip[] = [
   {
     person: "Andrew",
     type: "sabbatical",
-    start: "2024-5-3",
-    end: "2024-6-1",
+    start: "2024-05-03",
+    end: "2024-06-01",
   },
   {
     person: "Dan",
     type: "sabbatical",
-    start: "2024-5-3",
-    end: "2024-6-1",
+    start: "2024-05-03",
+    end: "2024-06-01",
   },
   {
     person: "Ben",
     type: "vacation",
-    start: "2024-5-18",
-    end: "2024-6-5",
+    start: "2024-05-18",
+    end: "2024-06-04",
   },
   {
     person: "Liam",
     type: "vacation",
-    start: "2024-5-18",
-    end: "2024-6-5",
+    start: "2024-05-18",
+    end: "2024-06-04",
   },
 ];
 
