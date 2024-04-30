@@ -7,7 +7,49 @@ const trips: Trip[] = [
   {
     person: "Andrew",
     type: "sabbatical",
-    start: "2024-05-03",
+    itinerary: [
+      {
+        start: "2024-05-04",
+        end: "2024-05-08",
+        location: "Singapore",
+      },
+      {
+        start: "2024-05-09",
+        end: "2024-05-11",
+        location: "Taiwan",
+      },
+      {
+        start: "2024-05-12",
+        end: "2024-05-14",
+        location: "Sapporo",
+      },
+      {
+        start: "2024-05-15",
+        end: "2024-05-21",
+        location: "Tokyo",
+      },
+      {
+        start: "2024-05-22",
+        end: "2024-05-25",
+        location: "Kanazawa",
+      },
+      {
+        start: "2024-05-26",
+        end: "2024-05-26",
+        location: "Kyoto",
+      },
+      {
+        start: "2024-05-27",
+        end: "2024-05-30",
+        location: "Osaka",
+      },
+      {
+        start: "2024-05-31",
+        end: "2024-05-1",
+        location: "Tokyo",
+      },
+    ],
+    start: "2024-05-04",
     end: "2024-06-01",
   },
   {
