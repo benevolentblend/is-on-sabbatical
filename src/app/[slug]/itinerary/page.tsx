@@ -1,3 +1,4 @@
+import { type Metadata } from "next";
 import { redirect } from "next/navigation";
 import Navigation from "~/components/navigation";
 import Timeline from "~/components/timeline";
@@ -6,6 +7,20 @@ import { api } from "~/trpc/server";
 type Props = {
   params: { slug: string };
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const person = params.slug;
+
+  const sabbatical = person
+    ? await api.trip.getTrip({ name: person })
+    : undefined;
+
+  const name = sabbatical?.person ?? "";
+
+  return {
+    title: `Where is ${name} ?`,
+  };
+}
 
 export default async function Page({ params }: Props) {
   const person = params.slug;
