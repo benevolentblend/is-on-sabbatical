@@ -63,6 +63,53 @@ const trips: Trip[] = [
     type: "vacation",
     start: "2024-05-18",
     end: "2024-06-04",
+    itinerary: [
+      {
+        start: "2024-05-19",
+        end: "2024-05-22",
+        location: "Tokyo",
+      },
+      {
+        start: "2024-05-23",
+        end: "2024-05-23",
+        location: "Kanazawa",
+      },
+      {
+        start: "2024-05-24",
+        end: "2024-05-24",
+        location: "Shirakawa-go",
+      },
+      {
+        start: "2024-05-25",
+        end: "2024-05-25",
+        location: "Kanazawa",
+      },
+      {
+        start: "2024-05-26",
+        end: "2024-05-28",
+        location: "Kyoto",
+      },
+      {
+        start: "2024-05-29",
+        end: "2024-05-29",
+        location: "Osaka",
+      },
+      {
+        start: "2024-05-30",
+        end: "2024-05-30",
+        location: "Nara",
+      },
+      {
+        start: "2024-05-31",
+        end: "2024-05-31",
+        location: "Osaka",
+      },
+      {
+        start: "2024-06-01",
+        end: "2024-05-03",
+        location: "Tokyo",
+      },
+    ],
   },
   {
     person: "Liam",
